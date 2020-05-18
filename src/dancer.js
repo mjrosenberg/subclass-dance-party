@@ -8,6 +8,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   //this.setPosition(top,left);
   this.callCount = 0;
+
   //this.step(); //idk why this is needed
 
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
@@ -35,4 +36,4 @@ Dancer.prototype.setPosition = function(top, left) {
 Dancer.prototype.newStep = function(){};
 //Dancer.prototype.callCount = function(){ return this.Counter;};
 //dancer.setPosition(top, left);
-
+//Dancer.setPosition(top,left);
