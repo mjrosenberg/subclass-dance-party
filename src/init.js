@@ -28,6 +28,8 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    console.log(dancer.top);
+    console.log(dancer.left);
     $('body').append(dancer.$node);
   });
 });
