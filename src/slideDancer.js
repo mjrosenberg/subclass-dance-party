@@ -1,6 +1,7 @@
 var SlideDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.left = left;
+
 };
 SlideDancer.prototype = Object.create(Dancer.prototype);
 SlideDancer.prototype.constructor = SlideDancer;
