@@ -21,12 +21,37 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  /* border:10px solid red;
+  border-radius:10px; */
   position:absolute;
 }
-/* .slideDancer{
-  border: 10px solid blue;
-  background:url('https://www.clipartmax.com/png/middle/269-2698246_top-10-modes-of-transportation-in-harry-potter-harry-potter-on-a.png');
-  position: absolute;
-} */
+
+.bounceDancer{
+  background: url('/Users/maxrosenberg/Desktop/SEI/ghrphx10-subclass-dance-party/src/harrySmall.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
+
+.slideDancer{
+  background: url("/Users/maxrosenberg/Desktop/SEI/ghrphx10-subclass-dance-party/src/dracoSmall.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
+
+.blinkyDancer{
+  background: url("/Users/maxrosenberg/Desktop/SEI/ghrphx10-subclass-dance-party/src/dumbledore.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}

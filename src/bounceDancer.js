@@ -1,6 +1,8 @@
 var BounceDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.top = top;
+  //this.$node = $('<span class="dancer"> <img src = "/Users/maxrosenberg/Desktop/SEI/ghrphx10-subclass-dance-party/src/harrySmall.png"> </img></span>');
+  this.$node.addClass('bounceDancer');
 };
 BounceDancer.prototype = Object.create(Dancer.prototype);
 BounceDancer.prototype.constructor = SlideDancer;
