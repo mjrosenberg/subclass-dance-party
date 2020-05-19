@@ -8,6 +8,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   //this.setPosition(top,left);
   //this.callCount = 0;
+  //this.color = 'green';
   this.top = top;
   this.left = left;
 
@@ -33,6 +34,7 @@ Dancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
     top: top, //potentially this.top
     left: left
+    //background-color: this.color
   };
   this.$node.css(styleSettings);
 };
