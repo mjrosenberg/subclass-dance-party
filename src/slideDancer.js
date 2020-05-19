@@ -14,9 +14,24 @@ SlideDancer.prototype.step = function() {
   // }, 2000, function() {
   //   // Animation complete.
   // });
-  for (var i=1; i<=3; i++) {
-    this.$node.animate({left: this.left + 200},1000);
-    this.$node.animate({left: this.left},1000);
-  }
+  //for (var i=1; i<=3; i++) {
+  // this.$node.animate({height: 200},1000);
+  // this.$node.animate({height: 100},1000);
+  this.$node.animate({left: this.left + 100},1000);
+  this.$node.animate({left: this.left},1000);
+  // this.$node.rotate({
+  //   angle:0,
+  //   animateTo:360,
+  //   callback: rotation,
+  //   easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+  //       return c*(t/d)+b;
+  //   }
+  // });
+  //}
   //always starts on the very left and never slides back, ideally we would have it side 50px to the left and then back right
 };
+
+// slideDancer.prototype.lineUp = function(){
+//   this.$node.animate({left:'150px'});
+
+// }
