@@ -21,23 +21,41 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      2000//Math.random() * 1000
+      Math.random() * 1000
     );
     window.dancers.push(dancer);
     console.log(dancer);
     $('body').append(dancer.$node);
   });
+
   $('.lineUpButton').on('click', function(event) {
 
     for (var i = 0; i < window.dancers.length; i++){
       var curr = window.dancers[i];
       curr.$node.finish();
-      //curr.$node.stop();
-      //console.log(curr.$node.finish())
-      //$(".dancers").animate({left: "150px"});
-      //console.log(curr);
-      setTimeout(function(){curr.lineUp()}, 2000);
+      curr.lineUp();
     }
   });
+
+  // $('.bounceDancer').click(function() {
+  //   $(this).toggleClass('zoom-in');
+  // });
+  // $('.slideDancer').click(function() {
+  //   $(this).toggleClass('zoom-in');
+  // });
+  // $('.blinkyDancer').click(function() {
+  //   $(this).toggleClass('zoom-in');
+  // });
+
+
+  $(".bounceDancer").hover(
+    function() {
+    $(this).stop().animate({"opacity": "0"}, "slow");
+    },
+    function() {
+    $(this).stop().animate({"opacity": "1"}, "slow");
+    });
+
+
 });
 

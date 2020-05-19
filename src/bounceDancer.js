@@ -8,10 +8,9 @@ BounceDancer.prototype = Object.create(Dancer.prototype);
 BounceDancer.prototype.constructor = BounceDancer;
 BounceDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  //this.$node.toggle("bounce",{3},);
-  //this.$node.shake({direction: 'up', distance:10, speed: 75, times: 3}); //not a function
-  //for (var i=1; i<=3; i++) {
+  if (this.liningUp){
+    return;
+  }
   this.$node.animate({top: this.top + 80},"slow");
   this.$node.animate({top: this.top},"slow");
-  //}
 };
