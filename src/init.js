@@ -21,7 +21,7 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
-      1000//Math.random() * 1000
+      2000//Math.random() * 1000
     );
     window.dancers.push(dancer);
     console.log(dancer);
@@ -32,10 +32,11 @@ $(document).ready(function() {
     for (var i = 0; i < window.dancers.length; i++){
       var curr = window.dancers[i];
       curr.$node.finish();
+      //curr.$node.stop();
       //console.log(curr.$node.finish())
       //$(".dancers").animate({left: "150px"});
       //console.log(curr);
-      curr.lineUp();
+      setTimeout(function(){curr.lineUp()}, 2000);
     }
   });
 });
