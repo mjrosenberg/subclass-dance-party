@@ -36,25 +36,29 @@ $(document).ready(function() {
       curr.lineUp();
     }
   });
+  $('.partnerUpButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i+=2){
+      console.log(curr);
+      var curr = window.dancers[i];
+      if (window.dancers.length <= i+1){
+        return;
+      }
+      var next = window.dancers[i+1];
+      console.log(next);
+      var avgLeft = (curr.left + next.left)/2;
+      var avgTop = (curr.top + next.top)/2;
+      curr.left = avgLeft;
+      curr.top = avgTop;
+      next.left = avgLeft;
+      next.top = avgTop;
+      curr.$node.finish();
+      next.$node.finish();
+      curr.$node.animate({left: avgLeft, top: avgTop});
+      next.$node.animate({left: avgLeft, top: avgTop});
+    }
+  });
 
-  // $('.bounceDancer').click(function() {
-  //   $(this).toggleClass('zoom-in');
-  // });
-  // $('.slideDancer').click(function() {
-  //   $(this).toggleClass('zoom-in');
-  // });
-  // $('.blinkyDancer').click(function() {
-  //   $(this).toggleClass('zoom-in');
-  // });
 
-
-  $(".bounceDancer").hover(
-    function() {
-    $(this).stop().animate({"opacity": "0"}, "slow");
-    },
-    function() {
-    $(this).stop().animate({"opacity": "1"}, "slow");
-    });
 
 
 });

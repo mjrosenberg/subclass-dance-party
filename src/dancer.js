@@ -5,10 +5,13 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
   // this.$node = $('<span class="blinkyDancer"> <img src = "/Users/maxrosenberg/Desktop/SEI/ghrphx10-subclass-dance-party/src/dracoSmall.png"> </img></span>');
   this.left = left;
+  this.top = top;
   this.timeBetweenSteps = timeBetweenSteps;
   this.liningUp = false;
   this.step();
   this.setPosition(top, left);
+
+  this.$node.on('mouseover', this.changeColor.bind(this));
 };
 Dancer.prototype.step = function() {
   if (this.liningUp === false){
@@ -31,4 +34,6 @@ Dancer.prototype.lineUp = function(){
   this.$node.animate({left: 150});
 };
 
-//Dancer.prototype.changeColor = function(){ this.$node.css({})}
+Dancer.prototype.changeColor = function(){
+  this.$node.css({'border':'10px solid red'})
+};
