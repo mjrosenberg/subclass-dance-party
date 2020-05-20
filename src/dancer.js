@@ -12,9 +12,12 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.setPosition(top, left);
 
   this.$node.on('mouseover', this.changeColor.bind(this));
+  //this.$node.mouseover(this.changeColor.bind(this));
+  this.$node.on('mouseout', this.offColor.bind(this));
+
 };
 Dancer.prototype.step = function() {
-  if (this.liningUp === false){
+  if (this.liningUp === false) {
     setTimeout(this.step.bind(this), this.timeBetweenSteps);
   }
 
@@ -28,12 +31,19 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-Dancer.prototype.lineUp = function(){
+Dancer.prototype.lineUp = function() {
   this.liningUp = true;
   this.left = 150;
   this.$node.animate({left: 150});
 };
 
-Dancer.prototype.changeColor = function(){
-  this.$node.css({'border':'10px solid red'})
+Dancer.prototype.changeColor = function() {
+
+    this.$node.css({'border': '10px solid red'});
+
+};
+Dancer.prototype.offColor = function() {
+
+  this.$node.css({});
+
 };

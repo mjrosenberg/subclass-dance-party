@@ -30,17 +30,17 @@ $(document).ready(function() {
 
   $('.lineUpButton').on('click', function(event) {
 
-    for (var i = 0; i < window.dancers.length; i++){
+    for (var i = 0; i < window.dancers.length; i++) {
       var curr = window.dancers[i];
       curr.$node.finish();
       curr.lineUp();
     }
   });
   $('.partnerUpButton').on('click', function(event) {
-    for (var i = 0; i < window.dancers.length; i+=2){
+    for (var i = 0; i < window.dancers.length; i+=2) {
       console.log(curr);
       var curr = window.dancers[i];
-      if (window.dancers.length <= i+1){
+      if (window.dancers.length <= i+1) {
         return;
       }
       var next = window.dancers[i+1];
